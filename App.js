@@ -1,41 +1,138 @@
 import * as React from 'react';
-import { Text, View, StyleSheet, Button } from 'react-native';
-import Constants from 'expo-constants';
-import { useState } from 'react';
+import { View, Text, Button, StyleSheet } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-export default function App() {
-  const [counter, setCounter] = useState(0);
+function HomeScreen({ navigation }) {
   return (
-    <>
-      <View style={styles.container}>
-        <View>
-          <Button 
-            title="Decrease"
-            onPress={() => setCounter(counter - 1)} 
-          />
-        </View>
-        <Text>{counter}</Text>
+    <View style={styles.container}>
+      <Text>Home Screen</Text>
+      <View style={styles.button}>
         <Button
-        onPress={() => setCounter(counter + 1)}
-          title="Increase"
+          title="About"
+          onPress={() => {
+            navigation.navigate('About');
+          }}
         />
       </View>
-    </>
+      <View style={styles.button}>
+        <Button
+          title="Users"
+          onPress={() => {
+            navigation.navigate('Users');
+          }}
+        />
+      </View>
+    </View>
+  );
+}
+
+function AboutScreen({ navigation }) {
+  return (
+    <View style={styles.container}>
+      <Text>About Screen</Text>
+      <View style={styles.button}>
+      <Button
+        title="Home"
+        onPress={() => {
+          navigation.navigate('Home');
+        }}
+      />
+      </View>
+      <Button title="Go back" onPress={() => navigation.goBack()} />
+    </View>
+  );
+}
+
+function UsersScreen({ navigation }) {
+  return (
+    <View style={styles.container}>
+      <Text>Users Screen</Text>
+      <View style={styles.button}>
+        <Button
+          title="About"
+          onPress={() => {
+            navigation.navigate('About');
+          }}
+        />
+      </View>
+      <Button
+        title="Profile"
+        onPress={() => {
+          navigation.navigate('Profile');
+        }}
+      />
+      <View style={styles.button}>
+      <Button 
+        title="Home"
+        onPress={() => {
+          navigation.navigate('Home');
+        }}
+      />
+      </View>
+    </View>
+  );
+}
+
+function ProfileScreen({ navigation }) {
+  return (
+    <View style={styles.container}>
+      <Text>Profile</Text>
+      <View style={styles.button}>
+        <Button
+          title="About"
+          onPress={() => {
+            navigation.navigate('About');
+          }}
+        />
+      </View>
+      <View style={styles.button}>
+        <Button
+          title="Home"
+          onPress={() => {
+            navigation.navigate('Home');
+          }}
+        />
+      </View>
+      <View style={styles.button}>
+        <Button
+          title="Users"
+          onPress={() => {
+            navigation.navigate('users');
+          }}
+        />
+      </View>
+    </View>
+  );
+}
+
+const Stack = createNativeStackNavigator();
+
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="About" component={AboutScreen} />
+        <Stack.Screen name="Users" component={UsersScreen} />
+        <Stack.Screen name="Profile" component={ProfileScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#7CA1B4",
+    backgroundColor: '#ffad1f',
     flex: 1,
-    alignItems: "center", // ignore this - we'll come back to it
-    justifyContent: "space-around", // ignore this - we'll come back to it
-    flexDirection: "row",
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'column',
   },
-  square: {
-    backgroundColor: "#7cb48f",
-    width: 100,
-    height: 100,
+  button: {
+    backgroundColor: 'black',
     margin: 4,
   },
 });
+
+export default App;
