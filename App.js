@@ -1,138 +1,193 @@
-import * as React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import React from 'react';
+import {
+  StyleSheet,
+  View,
+  Text,
+  Image,
+  Dimensions,
+  ScrollView,
+} from 'react-native';
+import logo from './assets/picture.png';
 
-function HomeScreen({ navigation }) {
+export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Home Screen</Text>
-      <View style={styles.button}>
-        <Button
-          title="About"
-          onPress={() => {
-            navigation.navigate('About');
-          }}
-        />
+    <ScrollView style={{ backgroundColor: 'grey' }}>
+      <View style={styles.container}>
+        <View style={styles.card}>
+          <View style={styles.header}>
+            <Image
+              style={styles.AvatarImage}
+              source={{
+                uri: 'https://image.winudf.com/v2/image/Y29tLmR1eHQucHJvZi5mcm9udF9pY29uXzBfNzM5NThjNGY/icon.png?w=340&fakeurl=1',
+              }}></Image>
+            <Text style={styles.followText}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam
+            </Text>
+          </View>
+        </View>
       </View>
-      <View style={styles.button}>
-        <Button
-          title="Users"
-          onPress={() => {
-            navigation.navigate('Users');
-          }}
-        />
+      <View style={styles.container}>
+        <View style={styles.card}>
+          <View style={styles.header}>
+            <Image
+              style={styles.AvatarImage}
+              source={{
+                uri: 'https://image.winudf.com/v2/image/Y29tLmR1eHQucHJvZi5mcm9udF9pY29uXzBfNzM5NThjNGY/icon.png?w=340&fakeurl=1',
+              }}></Image>
+            <Text style={styles.followText}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam
+            </Text>
+          </View>
+        </View>
       </View>
-    </View>
+      <View style={styles.container}>
+        <View style={styles.card}>
+          <View style={styles.header}>
+            <Image
+              style={styles.AvatarImage}
+              source={{
+                uri: 'https://image.winudf.com/v2/image/Y29tLmR1eHQucHJvZi5mcm9udF9pY29uXzBfNzM5NThjNGY/icon.png?w=340&fakeurl=1',
+              }}></Image>
+            <Text style={styles.followText}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View style={styles.container}>
+        <View style={styles.card}>
+          <View style={styles.header}>
+            <Image
+              style={styles.AvatarImage}
+              source={{
+                uri: 'https://image.winudf.com/v2/image/Y29tLmR1eHQucHJvZi5mcm9udF9pY29uXzBfNzM5NThjNGY/icon.png?w=340&fakeurl=1',
+              }}></Image>
+            <Text style={styles.followText}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View style={styles.container}>
+        <View style={styles.card}>
+          <View style={styles.header}>
+            <Image
+              style={styles.AvatarImage}
+              source={{
+                uri: 'https://image.winudf.com/v2/image/Y29tLmR1eHQucHJvZi5mcm9udF9pY29uXzBfNzM5NThjNGY/icon.png?w=340&fakeurl=1',
+              }}></Image>
+            <Text style={styles.followText}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View style={styles.container}>
+        <View style={styles.card}>
+          <View style={styles.header}>
+            <Image
+              style={styles.AvatarImage}
+              source={{
+                uri: 'https://image.winudf.com/v2/image/Y29tLmR1eHQucHJvZi5mcm9udF9pY29uXzBfNzM5NThjNGY/icon.png?w=340&fakeurl=1',
+              }}></Image>
+            <Text style={styles.followText}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View style={styles.container}>
+        <View style={styles.card}>
+          <View style={styles.header}>
+            <Image
+              style={styles.AvatarImage}
+              source={{
+                uri: 'https://image.winudf.com/v2/image/Y29tLmR1eHQucHJvZi5mcm9udF9pY29uXzBfNzM5NThjNGY/icon.png?w=340&fakeurl=1',
+              }}></Image>
+            <Text style={styles.followText}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View style={styles.container}>
+        <View style={styles.card}>
+          <View style={styles.header}>
+            <Image
+              style={styles.AvatarImage}
+              source={{
+                uri: 'https://image.winudf.com/v2/image/Y29tLmR1eHQucHJvZi5mcm9udF9pY29uXzBfNzM5NThjNGY/icon.png?w=340&fakeurl=1',
+              }}></Image>
+            <Text style={styles.followText}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View style={styles.container}>
+        <View style={styles.card}>
+          <View style={styles.header}>
+            <Image
+              style={styles.AvatarImage}
+              source={{
+                uri: 'https://image.winudf.com/v2/image/Y29tLmR1eHQucHJvZi5mcm9udF9pY29uXzBfNzM5NThjNGY/icon.png?w=340&fakeurl=1',
+              }}></Image>
+            <Text style={styles.followText}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam
+            </Text>
+          </View>
+        </View>
+      </View>
+    </ScrollView>
   );
 }
 
-function AboutScreen({ navigation }) {
-  return (
-    <View style={styles.container}>
-      <Text>About Screen</Text>
-      <View style={styles.button}>
-      <Button
-        title="Home"
-        onPress={() => {
-          navigation.navigate('Home');
-        }}
-      />
-      </View>
-      <Button title="Go back" onPress={() => navigation.goBack()} />
-    </View>
-  );
-}
-
-function UsersScreen({ navigation }) {
-  return (
-    <View style={styles.container}>
-      <Text>Users Screen</Text>
-      <View style={styles.button}>
-        <Button
-          title="About"
-          onPress={() => {
-            navigation.navigate('About');
-          }}
-        />
-      </View>
-      <Button
-        title="Profile"
-        onPress={() => {
-          navigation.navigate('Profile');
-        }}
-      />
-      <View style={styles.button}>
-      <Button 
-        title="Home"
-        onPress={() => {
-          navigation.navigate('Home');
-        }}
-      />
-      </View>
-    </View>
-  );
-}
-
-function ProfileScreen({ navigation }) {
-  return (
-    <View style={styles.container}>
-      <Text>Profile</Text>
-      <View style={styles.button}>
-        <Button
-          title="About"
-          onPress={() => {
-            navigation.navigate('About');
-          }}
-        />
-      </View>
-      <View style={styles.button}>
-        <Button
-          title="Home"
-          onPress={() => {
-            navigation.navigate('Home');
-          }}
-        />
-      </View>
-      <View style={styles.button}>
-        <Button
-          title="Users"
-          onPress={() => {
-            navigation.navigate('users');
-          }}
-        />
-      </View>
-    </View>
-  );
-}
-
-const Stack = createNativeStackNavigator();
-
-function App() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="About" component={AboutScreen} />
-        <Stack.Screen name="Users" component={UsersScreen} />
-        <Stack.Screen name="Profile" component={ProfileScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-}
-
+const screen = Dimensions.get('screen');
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#ffad1f',
     flex: 1,
+    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    flexDirection: 'column',
+    padding: 2,
   },
-  button: {
-    backgroundColor: 'black',
-    margin: 4,
+  card: {
+    backgroundColor: '#fff',
+    width: screen.width * 1,
+  },
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 15,
+    paddingVertical: 10,
+  },
+  followText: {
+    fontWeight: 'bold',
+    color: '#0095f6',
+    width: 240,
+  },
+  AvatarImage: {
+    height: 75,
+    width: 75,
+    resizeMode: 'stretch',
+    margin: 15,
   },
 });
-
-export default App;
