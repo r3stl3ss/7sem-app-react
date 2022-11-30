@@ -1,193 +1,119 @@
-import React from 'react';
-import {
-  StyleSheet,
-  View,
-  Text,
-  Image,
-  Dimensions,
-  ScrollView,
-} from 'react-native';
-import logo from './assets/picture.png';
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View, Image } from 'react-native';
+import picture1 from './assets/picture1.png';
+import picture2 from './assets/picture2.png';
+import picture3 from './assets/picture3.png';
+import picture4 from './assets/picture4.png';
+import picture5 from './assets/picture5.png';
+import picture6 from './assets/picture6.png';
+import picture7 from './assets/picture7.png';
+import picture8 from './assets/picture8.png';
+import picture9 from './assets/picture9.png';
+import picture10 from './assets/picture10.png';
 
 export default function App() {
   return (
-    <ScrollView style={{ backgroundColor: 'grey' }}>
-      <View style={styles.container}>
-        <View style={styles.card}>
-          <View style={styles.header}>
-            <Image
-              style={styles.AvatarImage}
-              source={{
-                uri: 'https://image.winudf.com/v2/image/Y29tLmR1eHQucHJvZi5mcm9udF9pY29uXzBfNzM5NThjNGY/icon.png?w=340&fakeurl=1',
-              }}></Image>
-            <Text style={styles.followText}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam
-            </Text>
-          </View>
-        </View>
+    <View style={styles.container}>
+      <View style={styles.child}>
+        <Image
+        style={styles.image}
+        source={
+          require('./assets/picture1.png')
+        }
+          />
       </View>
-      <View style={styles.container}>
-        <View style={styles.card}>
-          <View style={styles.header}>
-            <Image
-              style={styles.AvatarImage}
-              source={{
-                uri: 'https://image.winudf.com/v2/image/Y29tLmR1eHQucHJvZi5mcm9udF9pY29uXzBfNzM5NThjNGY/icon.png?w=340&fakeurl=1',
-              }}></Image>
-            <Text style={styles.followText}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam
-            </Text>
-          </View>
-        </View>
+      <View style={styles.child}>
+        <Image
+        style={styles.image}
+        source={
+          require('./assets/picture2.png')
+        }
+          />
       </View>
-      <View style={styles.container}>
-        <View style={styles.card}>
-          <View style={styles.header}>
-            <Image
-              style={styles.AvatarImage}
-              source={{
-                uri: 'https://image.winudf.com/v2/image/Y29tLmR1eHQucHJvZi5mcm9udF9pY29uXzBfNzM5NThjNGY/icon.png?w=340&fakeurl=1',
-              }}></Image>
-            <Text style={styles.followText}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam
-            </Text>
-          </View>
-        </View>
+      <View style={styles.child}>
+        <Image
+        style={styles.image}
+        source={
+          require('./assets/picture3.png')
+        }
+          />
       </View>
-      <View style={styles.container}>
-        <View style={styles.card}>
-          <View style={styles.header}>
-            <Image
-              style={styles.AvatarImage}
-              source={{
-                uri: 'https://image.winudf.com/v2/image/Y29tLmR1eHQucHJvZi5mcm9udF9pY29uXzBfNzM5NThjNGY/icon.png?w=340&fakeurl=1',
-              }}></Image>
-            <Text style={styles.followText}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam
-            </Text>
-          </View>
-        </View>
+      <View style={styles.child}>
+        <Image
+        style={styles.image}
+        source={
+          require('./assets/picture4.png')
+        }
+          />
       </View>
-      <View style={styles.container}>
-        <View style={styles.card}>
-          <View style={styles.header}>
-            <Image
-              style={styles.AvatarImage}
-              source={{
-                uri: 'https://image.winudf.com/v2/image/Y29tLmR1eHQucHJvZi5mcm9udF9pY29uXzBfNzM5NThjNGY/icon.png?w=340&fakeurl=1',
-              }}></Image>
-            <Text style={styles.followText}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam
-            </Text>
-          </View>
-        </View>
+      <View style={styles.child}>
+        <Image
+        style={styles.image}
+        source={
+          require('./assets/picture5.png')
+        }
+          />
       </View>
-      <View style={styles.container}>
-        <View style={styles.card}>
-          <View style={styles.header}>
-            <Image
-              style={styles.AvatarImage}
-              source={{
-                uri: 'https://image.winudf.com/v2/image/Y29tLmR1eHQucHJvZi5mcm9udF9pY29uXzBfNzM5NThjNGY/icon.png?w=340&fakeurl=1',
-              }}></Image>
-            <Text style={styles.followText}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam
-            </Text>
-          </View>
-        </View>
+      <View style={styles.child}>
+        <Image
+        style={styles.image}
+        source={
+          require('./assets/picture6.png')
+        }
+          />
       </View>
-      <View style={styles.container}>
-        <View style={styles.card}>
-          <View style={styles.header}>
-            <Image
-              style={styles.AvatarImage}
-              source={{
-                uri: 'https://image.winudf.com/v2/image/Y29tLmR1eHQucHJvZi5mcm9udF9pY29uXzBfNzM5NThjNGY/icon.png?w=340&fakeurl=1',
-              }}></Image>
-            <Text style={styles.followText}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam
-            </Text>
-          </View>
-        </View>
+      <View style={styles.child}>
+        <Image
+        style={styles.image}
+        source={
+          require('./assets/picture7.png')
+        }
+          />
       </View>
-      <View style={styles.container}>
-        <View style={styles.card}>
-          <View style={styles.header}>
-            <Image
-              style={styles.AvatarImage}
-              source={{
-                uri: 'https://image.winudf.com/v2/image/Y29tLmR1eHQucHJvZi5mcm9udF9pY29uXzBfNzM5NThjNGY/icon.png?w=340&fakeurl=1',
-              }}></Image>
-            <Text style={styles.followText}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam
-            </Text>
-          </View>
-        </View>
+      <View style={styles.child}>
+        <Image
+        style={styles.image}
+        source={
+          require('./assets/picture8.png')
+        }
+          />
       </View>
-      <View style={styles.container}>
-        <View style={styles.card}>
-          <View style={styles.header}>
-            <Image
-              style={styles.AvatarImage}
-              source={{
-                uri: 'https://image.winudf.com/v2/image/Y29tLmR1eHQucHJvZi5mcm9udF9pY29uXzBfNzM5NThjNGY/icon.png?w=340&fakeurl=1',
-              }}></Image>
-            <Text style={styles.followText}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam
-            </Text>
-          </View>
-        </View>
+      <View style={styles.child}>
+        <Image
+        style={styles.image}
+        source={
+          require('./assets/picture9.png')
+        }
+          />
       </View>
-    </ScrollView>
+      <View style={styles.child}>
+        <Image
+        style={styles.image}
+        source={
+          require('./assets/picture10.png')
+        }
+          />
+      </View>
+    </View>
   );
 }
 
-const screen = Dimensions.get('screen');
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 2,
-  },
-  card: {
     backgroundColor: '#fff',
-    width: screen.width * 1,
-  },
-  header: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
-    paddingHorizontal: 15,
-    paddingVertical: 10,
+    flexWrap: 'wrap'
   },
-  followText: {
-    fontWeight: 'bold',
-    color: '#0095f6',
-    width: 240,
+  child: {
+    width: '33%', 
+    height: '15%', 
+    marginRight: 1,
+    marginBottom:1,
+    marginTop: 15
   },
-  AvatarImage: {
-    height: 75,
-    width: 75,
-    resizeMode: 'stretch',
-    margin: 15,
-  },
+  image: {
+    width: '100%',
+    height: '100%',
+  }
 });
