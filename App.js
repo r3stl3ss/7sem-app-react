@@ -1,193 +1,67 @@
-import React from 'react';
-import {
-  StyleSheet,
-  View,
-  Text,
-  Image,
-  Dimensions,
-  ScrollView,
-} from 'react-native';
-import logo from './assets/picture.png';
+import { StyleSheet,Image, Text, View, Button, TouchableOpacity } from 'react-native';
 
 export default function App() {
+
   return (
-    <ScrollView style={{ backgroundColor: 'grey' }}>
-      <View style={styles.container}>
-        <View style={styles.card}>
-          <View style={styles.header}>
-            <Image
-              style={styles.AvatarImage}
-              source={{
-                uri: 'https://image.winudf.com/v2/image/Y29tLmR1eHQucHJvZi5mcm9udF9pY29uXzBfNzM5NThjNGY/icon.png?w=340&fakeurl=1',
-              }}></Image>
-            <Text style={styles.followText}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam
-            </Text>
-          </View>
-        </View>
+    <View style={{flex: 1}}>
+      <View style={styles.title}>
+        <Text style={{color: '#fff',fontSize: 28}}>LOREM IPSUM</Text>
       </View>
-      <View style={styles.container}>
-        <View style={styles.card}>
-          <View style={styles.header}>
-            <Image
-              style={styles.AvatarImage}
-              source={{
-                uri: 'https://image.winudf.com/v2/image/Y29tLmR1eHQucHJvZi5mcm9udF9pY29uXzBfNzM5NThjNGY/icon.png?w=340&fakeurl=1',
-              }}></Image>
-            <Text style={styles.followText}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam
-            </Text>
-          </View>
+      <View style={styles.body}>
+        <Text style={{fontSize: 20, width: '80%', fontWeight: 'bold', marginTop: 5}}>The lorem ipsum is, in printing, a series of meaningless</Text>
+        <Text style={{width: '80%', color: 'gray', marginTop: 5}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</Text>
+        <Text style={{color:'#735928', width: '80%', marginTop: 5}}>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem</Text>
+        <Text style={{color:'gray', width: '80%'}}>2017-11-27 13:03:01</Text>
+        <View style={{flexDirection: 'row', marginTop: 10, alignItems: 'center', width: '80%'}}>
+          <Image
+          style={styles.avatar}
+          source={{
+            uri : 'https://cdn-icons-png.flaticon.com/512/147/147139.png'
+          }}></Image>
+          <Text style={{marginLeft: 10, fontSize: 22, color: '#735928', fontWeight: 'bold'}}>Mark Doe</Text>
         </View>
+        <TouchableOpacity style={styles.button}>
+          <Text style={{color:'#fff'}}>Like</Text>
+        </TouchableOpacity>
       </View>
-      <View style={styles.container}>
-        <View style={styles.card}>
-          <View style={styles.header}>
-            <Image
-              style={styles.AvatarImage}
-              source={{
-                uri: 'https://image.winudf.com/v2/image/Y29tLmR1eHQucHJvZi5mcm9udF9pY29uXzBfNzM5NThjNGY/icon.png?w=340&fakeurl=1',
-              }}></Image>
-            <Text style={styles.followText}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam
-            </Text>
-          </View>
-        </View>
+    
+        
+        
       </View>
-      <View style={styles.container}>
-        <View style={styles.card}>
-          <View style={styles.header}>
-            <Image
-              style={styles.AvatarImage}
-              source={{
-                uri: 'https://image.winudf.com/v2/image/Y29tLmR1eHQucHJvZi5mcm9udF9pY29uXzBfNzM5NThjNGY/icon.png?w=340&fakeurl=1',
-              }}></Image>
-            <Text style={styles.followText}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam
-            </Text>
-          </View>
-        </View>
-      </View>
-      <View style={styles.container}>
-        <View style={styles.card}>
-          <View style={styles.header}>
-            <Image
-              style={styles.AvatarImage}
-              source={{
-                uri: 'https://image.winudf.com/v2/image/Y29tLmR1eHQucHJvZi5mcm9udF9pY29uXzBfNzM5NThjNGY/icon.png?w=340&fakeurl=1',
-              }}></Image>
-            <Text style={styles.followText}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam
-            </Text>
-          </View>
-        </View>
-      </View>
-      <View style={styles.container}>
-        <View style={styles.card}>
-          <View style={styles.header}>
-            <Image
-              style={styles.AvatarImage}
-              source={{
-                uri: 'https://image.winudf.com/v2/image/Y29tLmR1eHQucHJvZi5mcm9udF9pY29uXzBfNzM5NThjNGY/icon.png?w=340&fakeurl=1',
-              }}></Image>
-            <Text style={styles.followText}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam
-            </Text>
-          </View>
-        </View>
-      </View>
-      <View style={styles.container}>
-        <View style={styles.card}>
-          <View style={styles.header}>
-            <Image
-              style={styles.AvatarImage}
-              source={{
-                uri: 'https://image.winudf.com/v2/image/Y29tLmR1eHQucHJvZi5mcm9udF9pY29uXzBfNzM5NThjNGY/icon.png?w=340&fakeurl=1',
-              }}></Image>
-            <Text style={styles.followText}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam
-            </Text>
-          </View>
-        </View>
-      </View>
-      <View style={styles.container}>
-        <View style={styles.card}>
-          <View style={styles.header}>
-            <Image
-              style={styles.AvatarImage}
-              source={{
-                uri: 'https://image.winudf.com/v2/image/Y29tLmR1eHQucHJvZi5mcm9udF9pY29uXzBfNzM5NThjNGY/icon.png?w=340&fakeurl=1',
-              }}></Image>
-            <Text style={styles.followText}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam
-            </Text>
-          </View>
-        </View>
-      </View>
-      <View style={styles.container}>
-        <View style={styles.card}>
-          <View style={styles.header}>
-            <Image
-              style={styles.AvatarImage}
-              source={{
-                uri: 'https://image.winudf.com/v2/image/Y29tLmR1eHQucHJvZi5mcm9udF9pY29uXzBfNzM5NThjNGY/icon.png?w=340&fakeurl=1',
-              }}></Image>
-            <Text style={styles.followText}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam
-            </Text>
-          </View>
-        </View>
-      </View>
-    </ScrollView>
+    
   );
 }
 
-const screen = Dimensions.get('screen');
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 2,
-  },
-  card: {
+  body: {
+    flex: 5,
     backgroundColor: '#fff',
-    width: screen.width * 1,
+    width: "100%",
+    marginTop: 4 ,
+    alignItems: 'center',
   },
-  header: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    paddingHorizontal: 15,
-    paddingVertical: 10,
+  button: {
+    marginTop: 4,
+    backgroundColor: '#962456',
+    height: 40,
+    borderRadius: 30,
+    width: '80%',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
-  followText: {
-    fontWeight: 'bold',
-    color: '#0095f6',
-    width: 240,
+  title: {
+    flex: 1,
+    backgroundColor: '#837123',
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: "center",
   },
-  AvatarImage: {
-    height: 75,
-    width: 75,
-    resizeMode: 'stretch',
-    margin: 15,
-  },
+  avatar: {
+    width: 80, 
+    height: 80, 
+    borderRadius: 40,
+    borderWidth: 5,
+    borderColor: '#735928'
+
+  }
 });
