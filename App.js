@@ -1,41 +1,48 @@
-import * as React from 'react';
-import { Text, View, StyleSheet, Button } from 'react-native';
-import Constants from 'expo-constants';
-import { useState } from 'react';
+import {StyleSheet, Text, TextInput, View} from 'react-native';
+import {useState} from "react";
 
-export default function App() {
-  const [counter, setCounter] = useState(0);
-  return (
-    <>
-      <View style={styles.container}>
-        <View>
-          <Button 
-            title="Decrease"
-            onPress={() => setCounter(counter - 1)} 
-          />
-        </View>
-        <Text>{counter}</Text>
-        <Button
-        onPress={() => setCounter(counter + 1)}
-          title="Increase"
-        />
-      </View>
-    </>
-  );
-}
+const App = () => {
+    const emailReg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
+    const passReg = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/;
+    const [name, setName] = useState('');
+    const [pass, setPass] = useState('');
 
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: "#7CA1B4",
-    flex: 1,
-    alignItems: "center", // ignore this - we'll come back to it
-    justifyContent: "space-around", // ignore this - we'll come back to it
-    flexDirection: "row",
-  },
-  square: {
-    backgroundColor: "#7cb48f",
-    width: 100,
-    height: 100,
-    margin: 4,
-  },
-});
+    if (passReg.test(pass)) {
+        return (
+            <View style={{
+                flex: 1,
+                alignContent: 'center',
+                justifyContent: 'center',
+                padding: 16,
+            }}>
+                <Text>Welcome, {name}</Text>
+            </View>
+        )
+    } else {
+        return (
+            <View style={{
+                flex: 1,
+                alignContent: 'center',
+                justifyContent: 'center',
+                padding: 16,
+            }}>
+                <Text style={{marginVertical: 16}}>
+                    Name
+                </Text>
+                <TextInput
+                    style={{padding: 8, backgroundColor: '#f5f5f5', marginBottom: 10}}
+                    onChangeText={text => setName(text)}
+                />
+                <Text style={{marginVertical: 16}}>
+                    Password (8+ symbols, digits and letters)
+                </Text>
+                <TextInput
+                    style={{padding: 8, backgroundColor: '#f5f5f5'}}
+                    onChangeText={text => setPass(text)}
+                />
+            </View>
+        )
+    }
+};
+
+export default App;
