@@ -1,41 +1,46 @@
-import * as React from 'react';
-import { Text, View, StyleSheet, Button } from 'react-native';
-import Constants from 'expo-constants';
-import { useState } from 'react';
+import React, {useState} from 'react'
+import {View, Text, Button, ScrollView, StyleSheet, TextInput, SafeAreaView, StatusBar} from 'react-native'
+import CheckBox from 'expo-checkbox'
+import {observer} from 'mobx-react-lite'
+import uuid from 'react-native-uuid'
+import Todo from "./store/Todo";
 
-export default function App() {
-  const [counter, setCounter] = useState(0);
-  return (
-    <>
-      <View style={styles.container}>
-        <View>
-          <Button 
-            title="Decrease"
-            onPress={() => setCounter(counter - 1)} 
-          />
-        </View>
-        <Text>{counter}</Text>
-        <Button
-        onPress={() => setCounter(counter + 1)}
-          title="Increase"
-        />
-      </View>
-    </>
-  );
-}
+
+const App = observer(() => {
+
+    const [text, setText] = useState('')
+
+    return (
+        <SafeAreaView style={styles.container}>
+            <ScrollView>
+                <TextInput style={{height: 40}} placeholder="Create" onChangeText={t => setText(t)} defaultValue={text}/>
+                <Button title="Add Todo" onPress={() => Todo.createTodo({id: uuid.v4(), title: text})}/>
+                {Todo.todos.map(({id, title, completed}) => (
+                    <View
+                        style={{
+                            flexDirection: 'row',
+                            width: 350,
+                            justifyContent: 'space-between',
+                            alignItems: 'center'
+                        }}
+                        key={id}
+                    >
+                        <CheckBox value={completed} onValueChange={() => Todo.completeTodo(id)}/>
+                        <Text>{title}</Text>
+                        <Button title="Delete" onPress={() => Todo.deleteTodo(id)}/>
+                    </View>
+                ))}
+            </ScrollView>
+        </SafeAreaView>
+    )
+})
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: "#7CA1B4",
-    flex: 1,
-    alignItems: "center", // ignore this - we'll come back to it
-    justifyContent: "space-around", // ignore this - we'll come back to it
-    flexDirection: "row",
-  },
-  square: {
-    backgroundColor: "#7cb48f",
-    width: 100,
-    height: 100,
-    margin: 4,
-  },
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        marginTop: StatusBar.currentHeight
+    }
 });
+
+export default App
